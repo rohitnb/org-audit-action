@@ -12,7 +12,7 @@ jobs:
       - name: Membership Audit Log Action
         uses: svanboxel/org-audit-action@master
         with:
-          organization: '<ORG_NAME_GOES_HERE>'
+          organization: 'octodemo'
           token: ${{ secrets.ORG_ADMIN_TOKEN }}
           issue: false
           samlIdentities: true
