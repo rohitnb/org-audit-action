@@ -1,0 +1,27 @@
+name: Org Membership Audit
+
+on: 
+  workflow_dispatch:
+    inputs:
+      org-name:
+        description: 'Name of the Organization'
+        required: true
+        default: 'null'
+
+jobs:
+  org_audit:
+    name: Run Org Audit
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Membership Audit Log Action
+        uses: svanboxel/org-audit-action@v1
+        with:
+          organization: ${{ github.event.inputs.name }}
+          token: ${{ secrets.ORG_ADMIN_TOKEN }}
+          issue: false
+          samlIdentities: true
+          
+      - name: Do an LS
+        run: |
+          ls -lah
