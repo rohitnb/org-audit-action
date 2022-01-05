@@ -17,7 +17,7 @@ jobs:
       - name: Membership Audit Log Action
         uses: svanboxel/org-audit-action@master
         with:
-          organization: ${{ github.event.inputs.name }}
+          organization: 'RohitDemo'
           token: ${{ secrets.ORG_ADMIN_TOKEN }}
           issue: false
           samlIdentities: true
