@@ -2,11 +2,6 @@ name: Org Membership Audit
 
 on: 
   workflow_dispatch:
-    inputs:
-      org-name:
-        description: 'Name of the Organization'
-        required: true
-        default: 'null'
 
 jobs:
   org_audit:
@@ -17,11 +12,7 @@ jobs:
       - name: Membership Audit Log Action
         uses: svanboxel/org-audit-action@master
         with:
-          organization: 'RohitDemo'
+          organization: '<ORG_NAME_GOES_HERE>'
           token: ${{ secrets.ORG_ADMIN_TOKEN }}
           issue: false
           samlIdentities: true
-          
-      - name: Do an LS
-        run: |
-          ls -lah
