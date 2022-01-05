@@ -15,7 +15,7 @@ jobs:
     
     steps:
       - name: Membership Audit Log Action
-        uses: svanboxel/org-audit-action@v1
+        uses: svanboxel/org-audit-action@v0.1.0
         with:
           organization: ${{ github.event.inputs.name }}
           token: ${{ secrets.ORG_ADMIN_TOKEN }}
