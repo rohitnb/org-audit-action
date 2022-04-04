@@ -15,4 +15,4 @@ jobs:
           organization: 'octodemo'
           token: ${{ secrets.ORG_ADMIN_TOKEN }}
           issue: false
-          samlIdentities: true
+          samlIdentities: false
